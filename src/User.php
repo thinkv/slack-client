@@ -27,6 +27,18 @@ class User extends ClientObject
     {
         return $this->data['name'];
     }
+    
+    /**
+     * Gets the user's displayname.
+     *
+     * Does not include the @ symbol at the beginning.
+     *
+     * @return string The user's displayname.
+     */
+    public function getDisplayName()
+    {
+        return $this->data['profile']['display_name'];
+    }
 
     /**
      * Gets the user's first name if supplied.
